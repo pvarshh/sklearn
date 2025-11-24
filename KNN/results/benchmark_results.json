@@ -1,0 +1,182 @@
+[
+    {
+        "config": {
+            "n_samples": 1000,
+            "n_features": 10,
+            "k": 5
+        },
+        "sklearn": {
+            "train": 3.805875778198242,
+            "single_pred": 0.5637907981872559,
+            "batch_pred": 9.226083755493164
+        },
+        "cpp": {
+            "train": 2.48783,
+            "single_pred": 0.0109575,
+            "batch_pred": 1.22212
+        },
+        "agreement": 100.0
+    },
+    {
+        "config": {
+            "n_samples": 5000,
+            "n_features": 20,
+            "k": 5
+        },
+        "sklearn": {
+            "train": 7.258892059326172,
+            "single_pred": 0.6659030914306641,
+            "batch_pred": 92.76103973388672
+        },
+        "cpp": {
+            "train": 16.906,
+            "single_pred": 0.0631092,
+            "batch_pred": 21.388
+        },
+        "agreement": 99.9
+    },
+    {
+        "config": {
+            "n_samples": 10000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 27.93121337890625,
+            "single_pred": 2.9835891723632812,
+            "batch_pred": 312.61324882507324
+        },
+        "cpp": {
+            "train": 53.1103,
+            "single_pred": 0.183888,
+            "batch_pred": 97.5097
+        },
+        "agreement": 100.0
+    },
+    {
+        "config": {
+            "n_samples": 15000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 40.41886329650879,
+            "single_pred": 6.385331153869629,
+            "batch_pred": 687.6189708709717
+        },
+        "cpp": {
+            "train": 82.599,
+            "single_pred": 0.269425,
+            "batch_pred": 222.821
+        },
+        "agreement": 99.96666666666667
+    },
+    {
+        "config": {
+            "n_samples": 20000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 63.130855560302734,
+            "single_pred": 4.572417736053467,
+            "batch_pred": 1162.6160144805908
+        },
+        "cpp": {
+            "train": 118.314,
+            "single_pred": 0.391776,
+            "batch_pred": 518.314
+        },
+        "agreement": 99.97500000000001
+    },
+    {
+        "config": {
+            "n_samples": 25000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 69.81611251831055,
+            "single_pred": 5.240538120269775,
+            "batch_pred": 2032.4900150299072
+        },
+        "cpp": {
+            "train": 141.306,
+            "single_pred": 0.505356,
+            "batch_pred": 677.713
+        },
+        "agreement": 99.98
+    },
+    {
+        "config": {
+            "n_samples": 30000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 79.35595512390137,
+            "single_pred": 4.820070266723633,
+            "batch_pred": 2949.3508338928223
+        },
+        "cpp": {
+            "train": 171.154,
+            "single_pred": 0.591347,
+            "batch_pred": 876.218
+        },
+        "agreement": 99.98333333333333
+    },
+    {
+        "config": {
+            "n_samples": 40000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 112.19406127929688,
+            "single_pred": 6.422019004821777,
+            "batch_pred": 4334.666967391968
+        },
+        "cpp": {
+            "train": 222.225,
+            "single_pred": 0.788428,
+            "batch_pred": 1495.36
+        },
+        "agreement": 99.9875
+    },
+    {
+        "config": {
+            "n_samples": 50000,
+            "n_features": 50,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 120.04804611206055,
+            "single_pred": 7.871799468994141,
+            "batch_pred": 6317.939043045044
+        },
+        "cpp": {
+            "train": 275.722,
+            "single_pred": 1.03953,
+            "batch_pred": 2610.91
+        },
+        "agreement": 99.97
+    },
+    {
+        "config": {
+            "n_samples": 100000,
+            "n_features": 100,
+            "k": 10
+        },
+        "sklearn": {
+            "train": 452.2550106048584,
+            "single_pred": 23.492190837860107,
+            "batch_pred": 28453.773260116577
+        },
+        "cpp": {
+            "train": 904.615,
+            "single_pred": 4.28615,
+            "batch_pred": 21606.5
+        },
+        "agreement": 99.985
+    }
+]
