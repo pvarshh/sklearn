@@ -6,56 +6,44 @@
 #include <vector>
 #include <string>
 
-// Helper to read test data (features only + optional label to ignore)
-std::vector<std::vector<int>> read_test_data(const std::string &filepath)
-{
+std::vector<std::vector<int>> read_test_data(
+    const std::string &filepath
+) {
     std::ifstream file(filepath);
-    if (!file.is_open())
-    {
-        throw std::runtime_error("Could not open test file: " + filepath);
-    }
+    if (!file.is_open()) { throw std::runtime_error("Could not open test file: " + filepath); }
 
     std::string line;
-    // Skip header
     std::getline(file, line);
 
     std::vector<std::vector<int>> data;
-    while (std::getline(file, line))
-    {
-        if (line.empty())
-            continue;
+    while (std::getline(file, line)) {
+        if (line.empty()) { continue; }
         std::stringstream ss(line);
         std::string val_str;
         std::vector<int> features;
         std::vector<std::string> row_values;
 
-        while (std::getline(ss, val_str, ','))
-        {
+        while (std::getline(ss, val_str, ',')) {
             val_str.erase(0, val_str.find_first_not_of(" \t\r\n"));
             val_str.erase(val_str.find_last_not_of(" \t\r\n") + 1);
-            if (!val_str.empty())
-                row_values.push_back(val_str);
+            if (!val_str.empty()) { row_values.push_back(val_str); }
         }
 
         // If CSV failed, try space
-        if (row_values.size() <= 1 && line.find(',') == std::string::npos)
-        {
+        if (row_values.size() <= 1 && line.find(',') == std::string::npos) {
             row_values.clear();
             std::stringstream ss2(line);
-            while (ss2 >> val_str)
-            {
+            while (ss2 >> val_str) {
                 row_values.push_back(val_str);
             }
         }
 
-        if (row_values.size() < 2)
-            continue;
+        if (row_values.size() < 2) { continue; }
 
         // Ignore last column (label)
         row_values.pop_back();
 
-        for (const auto &v : row_values)
-        {
+        for (const auto &v : row_values) {
             features.push_back(std::stoi(v));
         }
         data.push_back(features);
@@ -65,8 +53,7 @@ std::vector<std::vector<int>> read_test_data(const std::string &filepath)
 
 int main(int argc, char *argv[])
 {
-    if (argc < 4)
-    {
+    if (argc < 4) {
         std::cerr << "Usage: " << argv[0] << " <train_file> <test_file> <k>" << std::endl;
         return 1;
     }
@@ -75,8 +62,7 @@ int main(int argc, char *argv[])
     std::string test_file = argv[2];
     int k = std::stoi(argv[3]);
 
-    try
-    {
+    try {
         KNN knn(k);
 
         // Measure Training Time
@@ -91,11 +77,9 @@ int main(int argc, char *argv[])
         // Measure Single Prediction Time (Average of first 100)
         double single_pred_avg_ms = 0;
         int num_single_tests = std::min((int)test_points.size(), 100);
-        if (num_single_tests > 0)
-        {
+        if (num_single_tests > 0) {
             auto start_single = std::chrono::high_resolution_clock::now();
-            for (int i = 0; i < num_single_tests; ++i)
-            {
+            for (int i = 0; i < num_single_tests; ++i) {
                 knn.classify(test_points[i]);
             }
             auto end_single = std::chrono::high_resolution_clock::now();
@@ -115,13 +99,11 @@ int main(int argc, char *argv[])
         std::cout << batch_pred_ms.count() << std::endl;
 
         // Output predictions to stdout
-        for (const auto &p : predictions)
-        {
+        for (const auto &p : predictions) { 
             std::cout << p << "\n";
         }
     }
-    catch (const std::exception &e)
-    {
+    catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
     }

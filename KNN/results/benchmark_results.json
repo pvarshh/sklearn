@@ -6,16 +6,16 @@
             "k": 5
         },
         "sklearn": {
-            "train": 2.9120445251464844,
-            "single_pred": 0.5032920837402344,
-            "batch_pred": 5.56182861328125
+            "train": 3.559112548828125,
+            "single_pred": 0.5286312103271484,
+            "batch_pred": 5.769252777099609
         },
         "cpp": {
-            "train": 2.447,
-            "single_pred": 0.0108208,
-            "batch_pred": 1.21263
+            "train": 2.40442,
+            "single_pred": 0.0112196,
+            "batch_pred": 1.22929
         },
-        "agreement": 99.5
+        "agreement": 100.0
     },
     {
         "config": {
@@ -24,14 +24,14 @@
             "k": 5
         },
         "sklearn": {
-            "train": 6.850957870483398,
-            "single_pred": 0.6397175788879395,
-            "batch_pred": 91.7060375213623
+            "train": 7.667064666748047,
+            "single_pred": 0.6356906890869141,
+            "batch_pred": 80.0628662109375
         },
         "cpp": {
-            "train": 16.5873,
-            "single_pred": 0.0627829,
-            "batch_pred": 21.2085
+            "train": 17.2774,
+            "single_pred": 0.0637458,
+            "batch_pred": 22.8693
         },
         "agreement": 100.0
     },
@@ -42,14 +42,14 @@
             "k": 10
         },
         "sklearn": {
-            "train": 37.36305236816406,
-            "single_pred": 2.7681994438171387,
-            "batch_pred": 345.51501274108887
+            "train": 24.254798889160156,
+            "single_pred": 2.477266788482666,
+            "batch_pred": 340.1961326599121
         },
         "cpp": {
-            "train": 53.7114,
-            "single_pred": 0.177226,
-            "batch_pred": 94.5509
+            "train": 53.957,
+            "single_pred": 0.169995,
+            "batch_pred": 97.3456
         },
         "agreement": 100.0
     },
@@ -60,16 +60,16 @@
             "k": 10
         },
         "sklearn": {
-            "train": 39.04104232788086,
-            "single_pred": 3.0885767936706543,
-            "batch_pred": 675.6420135498047
+            "train": 38.37108612060547,
+            "single_pred": 5.804958343505859,
+            "batch_pred": 719.8472023010254
         },
         "cpp": {
-            "train": 79.8604,
-            "single_pred": 0.240235,
-            "batch_pred": 203.186
+            "train": 84.7393,
+            "single_pred": 0.264657,
+            "batch_pred": 202.21
         },
-        "agreement": 100.0
+        "agreement": 99.96666666666667
     },
     {
         "config": {
@@ -78,14 +78,14 @@
             "k": 10
         },
         "sklearn": {
-            "train": 50.29296875,
-            "single_pred": 3.3605098724365234,
-            "batch_pred": 1174.678087234497
+            "train": 57.73115158081055,
+            "single_pred": 8.11795949935913,
+            "batch_pred": 1172.4989414215088
         },
         "cpp": {
-            "train": 106.714,
-            "single_pred": 0.355407,
-            "batch_pred": 356.537
+            "train": 113.962,
+            "single_pred": 0.352973,
+            "batch_pred": 421.044
         },
         "agreement": 100.0
     },
@@ -96,16 +96,16 @@
             "k": 10
         },
         "sklearn": {
-            "train": 60.38188934326172,
-            "single_pred": 4.184770584106445,
-            "batch_pred": 1689.7239685058594
+            "train": 69.25320625305176,
+            "single_pred": 6.132462024688721,
+            "batch_pred": 1965.4712677001953
         },
         "cpp": {
-            "train": 133.707,
-            "single_pred": 0.435044,
-            "batch_pred": 555.523
+            "train": 161.607,
+            "single_pred": 0.54718,
+            "batch_pred": 726.794
         },
-        "agreement": 99.98
+        "agreement": 100.0
     },
     {
         "config": {
@@ -114,14 +114,14 @@
             "k": 10
         },
         "sklearn": {
-            "train": 66.54787063598633,
-            "single_pred": 5.171949863433838,
-            "batch_pred": 2452.3398876190186
+            "train": 79.12611961364746,
+            "single_pred": 4.875397682189941,
+            "batch_pred": 2835.787773132324
         },
         "cpp": {
-            "train": 161.379,
-            "single_pred": 0.522009,
-            "batch_pred": 785.529
+            "train": 176.621,
+            "single_pred": 0.599013,
+            "batch_pred": 1045.52
         },
         "agreement": 99.95
     },
@@ -132,16 +132,16 @@
             "k": 10
         },
         "sklearn": {
-            "train": 95.42608261108398,
-            "single_pred": 5.205962657928467,
-            "batch_pred": 4192.939043045044
+            "train": 101.17077827453613,
+            "single_pred": 9.337573051452637,
+            "batch_pred": 4632.118940353394
         },
         "cpp": {
-            "train": 220.881,
-            "single_pred": 0.71092,
-            "batch_pred": 1382.12
+            "train": 241.695,
+            "single_pred": 0.90137,
+            "batch_pred": 1813.72
         },
-        "agreement": 99.97500000000001
+        "agreement": 99.9875
     },
     {
         "config": {
@@ -150,16 +150,16 @@
             "k": 10
         },
         "sklearn": {
-            "train": 113.99292945861816,
-            "single_pred": 6.0202789306640625,
-            "batch_pred": 6694.388866424561
+            "train": 127.97689437866211,
+            "single_pred": 10.977058410644531,
+            "batch_pred": 7600.284814834595
         },
         "cpp": {
-            "train": 292.026,
-            "single_pred": 1.5566,
-            "batch_pred": 2691.33
+            "train": 300.475,
+            "single_pred": 1.20606,
+            "batch_pred": 3131.34
         },
-        "agreement": 99.98
+        "agreement": 99.99
     },
     {
         "config": {
@@ -168,15 +168,15 @@
             "k": 10
         },
         "sklearn": {
-            "train": 448.2309818267822,
-            "single_pred": 24.769980907440186,
-            "batch_pred": 27305.700302124023
+            "train": 441.7548179626465,
+            "single_pred": 23.81030797958374,
+            "batch_pred": 30903.4321308136
         },
         "cpp": {
-            "train": 873.554,
-            "single_pred": 4.29319,
-            "batch_pred": 19743.5
+            "train": 980.021,
+            "single_pred": 5.46787,
+            "batch_pred": 23347.9
         },
-        "agreement": 99.97500000000001
+        "agreement": 99.995
     }
 ]

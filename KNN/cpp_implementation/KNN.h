@@ -6,8 +6,7 @@
 #include <memory>
 #include <queue>
 
-struct KDNode
-{
+struct KDNode {
     std::vector<int> point;
     std::string label;
     std::shared_ptr<KDNode> left;
@@ -18,8 +17,7 @@ struct KDNode
         : point(std::move(pt)), label(std::move(lbl)), left(nullptr), right(nullptr), axis(ax) {}
 };
 
-class KNN
-{
+class KNN {
 private:
     int k;
     std::shared_ptr<KDNode> root;
@@ -34,7 +32,6 @@ private:
 
 public:
     KNN(int k = 3);
-    void fit(const std::vector<std::vector<int>> &X, const std::vector<std::string> &y);
     void fit(const std::string &filepath);
     std::string classify(const std::vector<int> &point) const;
     std::vector<std::string> classify(const std::vector<std::vector<int>> &points) const;
