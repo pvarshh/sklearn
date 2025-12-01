@@ -1,0 +1,54 @@
+[
+    {
+        "size": 100,
+        "cpp": {
+            "multiplication": 7.958e-06,
+            "addition": 4.459e-06,
+            "transpose": 4.58e-07
+        },
+        "numpy": {
+            "multiplication": 0.0006310939788818359,
+            "addition": 2.09808349609375e-05,
+            "transpose": 7.867813110351562e-06
+        }
+    },
+    {
+        "size": 200,
+        "cpp": {
+            "multiplication": 1.7083e-05,
+            "addition": 3.625e-06,
+            "transpose": 5.83e-07
+        },
+        "numpy": {
+            "multiplication": 0.0022058486938476562,
+            "addition": 2.0265579223632812e-05,
+            "transpose": 1.0967254638671875e-05
+        }
+    },
+    {
+        "size": 500,
+        "cpp": {
+            "multiplication": 1.025e-05,
+            "addition": 6.417e-06,
+            "transpose": 4.58e-07
+        },
+        "numpy": {
+            "multiplication": 0.012883901596069336,
+            "addition": 0.0006988048553466797,
+            "transpose": 2.7179718017578125e-05
+        }
+    },
+    {
+        "size": 1000,
+        "cpp": {
+            "multiplication": 9.833e-06,
+            "addition": 4.959e-06,
+            "transpose": 5e-07
+        },
+        "numpy": {
+            "multiplication": 0.04053187370300293,
+            "addition": 0.008230924606323242,
+            "transpose": 2.193450927734375e-05
+        }
+    }
+]
