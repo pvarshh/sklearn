@@ -10,23 +10,30 @@
 #include <atomic>
 #include <iostream>
 
-class ThreadPool {
+class ThreadPool
+{
 public:
-    static ThreadPool &instance() {
+    static ThreadPool &instance()
+    {
         static ThreadPool pool;
         return pool;
     }
 
-    void parallel_for(int start, int end, std::function<void(int, int)> func) {
+    void parallel_for(int start, int end, std::function<void(int, int)> func)
+    {
         int num_threads = std::thread::hardware_concurrency();
         if (num_threads == 0)
             num_threads = 4;
 
         int range = end - start;
-        if (range <= 0) { return; }
+        if (range <= 0)
+        {
+            return;
+        }
 
         // Threshold for parallelism
-        if (range < 64) {
+        if (range < 64)
+        {
             func(start, end);
             return;
         }
@@ -34,7 +41,8 @@ public:
         int block_size = range / num_threads;
         std::atomic<int> tasks_remaining(num_threads - 1);
 
-        for (int t = 0; t < num_threads - 1; ++t) {
+        for (int t = 0; t < num_threads - 1; ++t)
+        {
             int t_start = start + t * block_size;
             int t_end = t_start + block_size;
 
@@ -47,17 +55,26 @@ public:
         func(start + (num_threads - 1) * block_size, end);
 
         // Wait for completion
-        while (tasks_remaining > 0) { std::this_thread::yield(); }
+        while (tasks_remaining > 0)
+        {
+            std::this_thread::yield();
+        }
     }
 
 private:
-    ThreadPool() {
+    ThreadPool()
+    {
         int num_threads = std::thread::hardware_concurrency();
-        if (num_threads == 0) { num_threads = 4; }
+        if (num_threads == 0)
+        {
+            num_threads = 4;
+        }
         stop = false;
 
-        for (int i = 0; i < num_threads; ++i) {
-            workers.emplace_back([this] {
+        for (int i = 0; i < num_threads; ++i)
+        {
+            workers.emplace_back([this]
+                                 {
                 while(true) {
                     std::function<void()> task; {
                         std::unique_lock<std::mutex> lock(this->queue_mutex);
@@ -78,10 +95,14 @@ private:
             stop = true;
         }
         condition.notify_all();
-        for (std::thread &worker : workers) { worker.join(); }
+        for (std::thread &worker : workers)
+        {
+            worker.join();
+        }
     }
 
-    void enqueue(std::function<void()> task) {
+    void enqueue(std::function<void()> task)
+    {
         {
             std::unique_lock<std::mutex> lock(queue_mutex);
             tasks.push(task);
@@ -97,7 +118,8 @@ private:
 };
 
 // Helper for parallel execution using the pool
-static void parallel_for(int start, int end, std::function<void(int, int)> func) {
+static void parallel_for(int start, int end, std::function<void(int, int)> func)
+{
     ThreadPool::instance().parallel_for(start, end, func);
 }
 
