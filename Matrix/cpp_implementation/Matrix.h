@@ -5,8 +5,7 @@
 #include <iostream>
 #include <functional>
 
-class Matrix
-{
+class Matrix {
 public:
     Matrix(int rows, int cols, bool init_zero = true);
     Matrix(const std::vector<std::vector<double>> &data);
