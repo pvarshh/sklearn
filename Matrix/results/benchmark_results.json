@@ -2,53 +2,53 @@
     {
         "size": 100,
         "cpp": {
-            "multiplication": 7.375e-06,
-            "addition": 3.208e-06,
-            "transpose": 4.58e-07
+            "multiplication": 8.333e-06,
+            "addition": 5.292e-06,
+            "transpose": 7.08e-07
         },
         "numpy": {
-            "multiplication": 0.0005300045013427734,
-            "addition": 8.106231689453125e-06,
-            "transpose": 7.867813110351562e-06
+            "multiplication": 0.011626958847045898,
+            "addition": 2.8133392333984375e-05,
+            "transpose": 2.4080276489257812e-05
         }
     },
     {
         "size": 200,
         "cpp": {
-            "multiplication": 7.25e-06,
-            "addition": 3.542e-06,
-            "transpose": 5.42e-07
+            "multiplication": 7.417e-06,
+            "addition": 6.292e-06,
+            "transpose": 3.75e-07
         },
         "numpy": {
-            "multiplication": 0.0005879402160644531,
-            "addition": 0.00013518333435058594,
-            "transpose": 2.1219253540039062e-05
+            "multiplication": 0.003201007843017578,
+            "addition": 0.00015401840209960938,
+            "transpose": 5.5789947509765625e-05
         }
     },
     {
         "size": 500,
         "cpp": {
-            "multiplication": 8.458e-06,
-            "addition": 4.584e-06,
-            "transpose": 7.5e-07
+            "multiplication": 1.0333e-05,
+            "addition": 4.208e-06,
+            "transpose": 5.41e-07
         },
         "numpy": {
-            "multiplication": 0.004150867462158203,
-            "addition": 0.0006740093231201172,
-            "transpose": 0.0002410411834716797
+            "multiplication": 0.009658098220825195,
+            "addition": 0.000701904296875,
+            "transpose": 2.7894973754882812e-05
         }
     },
     {
         "size": 1000,
         "cpp": {
-            "multiplication": 1.1958e-05,
-            "addition": 4.791e-06,
-            "transpose": 6.67e-07
+            "multiplication": 1.1125e-05,
+            "addition": 4.25e-06,
+            "transpose": 5.42e-07
         },
         "numpy": {
-            "multiplication": 0.020636796951293945,
-            "addition": 0.0020999908447265625,
-            "transpose": 2.3126602172851562e-05
+            "multiplication": 0.021586894989013672,
+            "addition": 0.0027551651000976562,
+            "transpose": 2.9087066650390625e-05
         }
     }
 ]

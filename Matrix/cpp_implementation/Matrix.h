@@ -6,6 +6,15 @@
 #include <functional>
 
 class Matrix {
+private:
+    int rows;
+    int cols;
+    double *data; // Aligned raw pointer
+
+    // Lazy evaluation support
+    mutable bool is_lazy = false;
+    mutable std::function<void(Matrix &)> lazy_computation;
+
 public:
     Matrix(int rows, int cols, bool init_zero = true);
     Matrix(const std::vector<std::vector<double>> &data);
@@ -37,15 +46,6 @@ public:
 
     // Force evaluation of lazy operations
     void evaluate() const;
-
-private:
-    int rows;
-    int cols;
-    double *data; // Aligned raw pointer
-
-    // Lazy evaluation support
-    mutable bool is_lazy = false;
-    mutable std::function<void(Matrix &)> lazy_computation;
 };
 
 #endif // MATRIX_H
